@@ -6,6 +6,7 @@ import { sanityConfig } from './config'
 
 export default defineConfig({
   ...sanityConfig,
+  basePath: '/studio',
   title: 'Portfolio de Fed',
   plugins: [
     structureTool(),
