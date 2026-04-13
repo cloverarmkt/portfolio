@@ -1,5 +1,23 @@
 import Link from 'next/link'
 
+const aiServices = [
+  {
+    title: 'Chatbot con IA para tu negocio',
+    description: 'Un asistente virtual que responde consultas de tus clientes las 24hs. Precio, disponibilidad, actividades — todo automatizado. Menos tiempo respondiendo WhatsApp, más reservas concretadas.',
+    tag: 'IA',
+  },
+  {
+    title: 'Contenido generado con IA',
+    description: 'Combinamos inteligencia artificial con tu voz y tu marca para generar descripciones, posts y textos SEO de forma consistente. Más contenido, menos tiempo.',
+    tag: 'IA',
+  },
+  {
+    title: 'Automatizaciones de WhatsApp',
+    description: 'Respuestas automáticas, confirmaciones de reserva, recordatorios y seguimientos post-visita. Tu negocio en piloto automático para las tareas repetitivas.',
+    tag: 'IA',
+  },
+]
+
 const services = [
   {
     title: 'Sitio Web Profesional',
@@ -121,6 +139,41 @@ export default function Servicios() {
               </ul>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* IA Section */}
+      <section className="max-w-6xl mx-auto px-6 pb-24">
+        <div className="rounded-2xl border overflow-hidden" style={{ borderColor: 'rgba(34, 197, 94, 0.2)' }}>
+          <div className="p-8 md:p-12" style={{ background: 'linear-gradient(135deg, rgba(34,197,94,0.05) 0%, var(--surface) 60%)' }}>
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-xs px-3 py-1 rounded-full font-semibold tracking-wider" style={{ background: 'var(--accent)', color: '#000' }}>
+                NUEVO
+              </span>
+              <p className="text-sm font-medium" style={{ color: 'var(--accent)' }}>Servicios con Inteligencia Artificial</p>
+            </div>
+            <h2 className="text-2xl md:text-3xl font-bold mb-3" style={{ color: 'var(--text-primary)' }}>
+              Tu negocio que trabaja solo, mientras vos atendés a los clientes
+            </h2>
+            <p className="text-base mb-10 max-w-2xl" style={{ color: 'var(--text-secondary)' }}>
+              Integramos herramientas de IA en tu negocio para automatizar consultas, generar contenido y convertir más visitantes en reservas — sin que tengas que aprender nada técnico.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+              {aiServices.map((s) => (
+                <div
+                  key={s.title}
+                  className="p-6 rounded-xl border card-hover"
+                  style={{ background: 'var(--bg)', borderColor: 'var(--border)' }}
+                >
+                  <span className="text-xs px-2 py-0.5 rounded font-medium mb-4 inline-block" style={{ background: 'rgba(34,197,94,0.1)', color: 'var(--accent)' }}>
+                    {s.tag}
+                  </span>
+                  <h3 className="font-semibold mb-3" style={{ color: 'var(--text-primary)' }}>{s.title}</h3>
+                  <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{s.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
