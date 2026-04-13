@@ -6,7 +6,7 @@ import { useState } from 'react'
 
 const links = [
   { href: '/', label: 'Inicio' },
-  { href: '/sobre-mi', label: 'Sobre mí' },
+  { href: '/sobre-mi', label: 'Nosotros' },
   { href: '/proyectos', label: 'Proyectos' },
   { href: '/servicios', label: 'Servicios' },
   { href: '/contacto', label: 'Contacto' },
@@ -17,14 +17,17 @@ export default function Navbar() {
   const [open, setOpen] = useState(false)
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b" style={{ background: 'rgba(12,12,12,0.85)', backdropFilter: 'blur(12px)', borderColor: 'var(--border)' }}>
+    <nav className="fixed top-0 left-0 right-0 z-50 border-b" style={{ background: 'rgba(9,9,11,0.85)', backdropFilter: 'blur(16px)', borderColor: 'var(--border)' }}>
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        {/* Logo */}
-        <Link href="/" className="text-lg font-bold tracking-tight" style={{ color: 'var(--text-primary)' }}>
-          Fed<span style={{ color: 'var(--accent)' }}>.</span>
+        <Link href="/" className="flex items-center gap-2">
+          <div className="w-8 h-8 rounded-lg flex items-center justify-center font-bold text-sm" style={{ background: 'var(--accent)', color: '#000' }}>
+            C
+          </div>
+          <span className="text-lg font-bold tracking-tight" style={{ color: 'var(--text-primary)' }}>
+            Clover
+          </span>
         </Link>
 
-        {/* Desktop links */}
         <div className="hidden md:flex items-center gap-8">
           {links.map((link) => (
             <Link
@@ -38,21 +41,19 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* CTA Desktop */}
         <Link
           href="/contacto"
-          className="hidden md:inline-flex items-center px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200"
+          className="hidden md:inline-flex items-center px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 glow-accent"
           style={{ background: 'var(--accent)', color: '#000' }}
         >
-          Hablemos
+          Empezar proyecto
         </Link>
 
-        {/* Mobile menu button */}
         <button
           className="md:hidden p-2"
           onClick={() => setOpen(!open)}
           style={{ color: 'var(--text-secondary)' }}
-          aria-label="Menú"
+          aria-label="Menu"
         >
           {open ? (
             <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -66,7 +67,6 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile menu */}
       {open && (
         <div className="md:hidden px-6 pb-6 flex flex-col gap-4" style={{ borderTop: '1px solid var(--border)' }}>
           {links.map((link) => (
@@ -86,7 +86,7 @@ export default function Navbar() {
             style={{ background: 'var(--accent)', color: '#000' }}
             onClick={() => setOpen(false)}
           >
-            Hablemos
+            Empezar proyecto
           </Link>
         </div>
       )}
