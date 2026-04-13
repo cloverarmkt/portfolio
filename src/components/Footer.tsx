@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { CloverLogo } from './Icons'
 
 export default function Footer() {
   return (
@@ -8,9 +9,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg flex items-center justify-center font-bold text-sm" style={{ background: 'var(--accent)', color: '#000' }}>
-                C
-              </div>
+              <CloverLogo size={28} className="text-[var(--accent)]" />
               <span className="text-lg font-bold" style={{ color: 'var(--text-primary)' }}>Clover</span>
             </div>
             <p className="text-sm leading-relaxed max-w-sm" style={{ color: 'var(--text-secondary)' }}>

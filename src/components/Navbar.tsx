@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
+import { CloverLogo } from './Icons'
 
 const links = [
   { href: '/', label: 'Inicio' },
@@ -20,9 +21,7 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 border-b" style={{ background: 'rgba(9,9,11,0.85)', backdropFilter: 'blur(16px)', borderColor: 'var(--border)' }}>
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg flex items-center justify-center font-bold text-sm" style={{ background: 'var(--accent)', color: '#000' }}>
-            C
-          </div>
+          <CloverLogo size={28} className="text-[var(--accent)]" />
           <span className="text-lg font-bold tracking-tight" style={{ color: 'var(--text-primary)' }}>
             Clover
           </span>

@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { HeroIllustration } from '@/components/Icons'
 
 const stats = [
   { number: '5+', label: 'Anos de experiencia' },
@@ -54,7 +55,8 @@ export default function Home() {
     <div>
       {/* Hero */}
       <section className="max-w-6xl mx-auto px-6 pt-28 pb-24">
-        <div className="max-w-3xl animate-fade-in">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="animate-fade-in">
           <div
             className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm mb-8"
             style={{ background: 'var(--accent-glow)', color: 'var(--accent)', border: '1px solid rgba(34, 197, 94, 0.2)' }}
@@ -101,6 +103,12 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Hero Illustration */}
+        <div className="hidden lg:block animate-fade-in-delay-2">
+          <HeroIllustration />
+        </div>
         </div>
       </section>
 
