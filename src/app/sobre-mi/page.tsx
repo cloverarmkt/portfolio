@@ -1,180 +1,113 @@
 import Link from 'next/link'
 
-const results = [
-  { number: '5+', label: 'años trabajando con negocios turísticos' },
-  { number: '30+', label: 'proyectos entregados' },
-  { number: '3x', label: 'promedio de aumento en consultas online' },
+const notThis = [
+  'Posteos por postear',
+  'Páginas web genéricas',
+  'Reportes vacíos',
+  'Promesas sin métricas',
 ]
 
-const problems = [
-  {
-    problem: '"Tengo un negocio increíble pero nadie me encuentra"',
-    solution: 'Sitio web optimizado + SEO local para aparecer cuando tu cliente ideal busca lo que vos ofrecés.',
-  },
-  {
-    problem: '"Mis reservas dependen del boca a boca"',
-    solution: 'Sistema de reservas online que trabaja 24/7, con confirmación automática y recordatorios.',
-  },
-  {
-    problem: '"No tengo tiempo para manejar las redes sociales"',
-    solution: 'Gestionamos tu contenido mensual: estrategia, diseño y publicación. Vos te enfocás en el negocio.',
-  },
-  {
-    problem: '"Mi marca no transmite lo que somos"',
-    solution: 'Identidad visual profesional que conecta con el viajero moderno y te diferencia de la competencia.',
-  },
+const butThis = [
+  'Estrategia con objetivo claro',
+  'Ecosistemas digitales que convierten',
+  'Resultados medibles desde el día uno',
+  'IA aplicada como ventaja real',
 ]
 
 export default function SobreMi() {
   return (
     <div>
       {/* Hero */}
-      <section className="max-w-6xl mx-auto px-6 pt-28 pb-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="animate-fade-in">
-            <p className="text-sm font-medium tracking-wider uppercase mb-4" style={{ color: 'var(--accent)' }}>Quiénes somos</p>
-            <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6" style={{ color: 'var(--text-primary)' }}>
-              Conocemos tu negocio<br />
-              <span style={{ color: 'var(--accent)' }}>porque vivimos en él</span>
-            </h1>
-            <p className="text-lg leading-relaxed mb-6" style={{ color: 'var(--text-secondary)' }}>
-              En 2024 nos mudamos a un pueblo costero en Costa Rica. Cafés de playa, cabañas escondidas, tours increíbles — negocios con alma que nadie encontraba online.
-            </p>
-            <p className="text-lg leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-              Ahí nació Clover como hoy lo conocés: marketing digital y desarrollo web pensado específicamente para negocios turísticos. No hacemos "páginas web genéricas". Hacemos herramientas que llenan calendarios.
-            </p>
-          </div>
+      <section className="max-w-6xl mx-auto px-6 pt-28 pb-20">
+        <div className="max-w-3xl animate-fade-in">
+          <p className="text-sm font-medium tracking-wider uppercase mb-6" style={{ color: 'var(--accent)' }}>Quiénes somos</p>
 
-          {/* Visual */}
-          <div className="animate-fade-in-delay-1">
-            <svg viewBox="0 0 400 320" fill="none" className="w-full h-auto">
-              {/* Map/location illustration */}
-              <rect width="400" height="320" rx="16" fill="#131316" />
+          <h1 className="text-4xl md:text-6xl font-bold leading-[1.05] mb-8" style={{ color: 'var(--text-primary)' }}>
+            Clover no es<br />
+            una agencia.<br />
+            <span style={{ color: 'var(--accent)' }}>Es un sistema<br />de crecimiento.</span>
+          </h1>
 
-              {/* Map background */}
-              <rect x="20" y="20" width="360" height="280" rx="12" fill="#0F0F12" />
-
-              {/* Map paths - abstract roads */}
-              <path d="M80 160 Q150 100 200 160 Q250 220 320 160" stroke="#27272A" strokeWidth="8" strokeLinecap="round" fill="none" />
-              <path d="M60 220 L180 220" stroke="#27272A" strokeWidth="5" strokeLinecap="round" />
-              <path d="M220 220 L340 220" stroke="#27272A" strokeWidth="5" strokeLinecap="round" />
-              <path d="M200 60 L200 280" stroke="#27272A" strokeWidth="4" strokeLinecap="round" strokeDasharray="8 6" />
-
-              {/* Location pins */}
-              {/* Argentina */}
-              <g transform="translate(100, 200)">
-                <circle cx="0" cy="0" r="14" fill="#22C55E" opacity="0.15" />
-                <circle cx="0" cy="0" r="8" fill="#22C55E" opacity="0.3" />
-                <circle cx="0" cy="0" r="4" fill="#22C55E" />
-                <text x="16" y="5" fill="#A1A1AA" fontSize="9" fontFamily="system-ui">Argentina</text>
-              </g>
-
-              {/* Costa Rica */}
-              <g transform="translate(270, 140)">
-                <circle cx="0" cy="0" r="14" fill="#22C55E" opacity="0.15" />
-                <circle cx="0" cy="0" r="8" fill="#22C55E" opacity="0.3" />
-                <circle cx="0" cy="0" r="4" fill="#22C55E" />
-                <text x="16" y="5" fill="#A1A1AA" fontSize="9" fontFamily="system-ui">Costa Rica</text>
-              </g>
-
-              {/* Connection line */}
-              <path d="M100 200 Q180 120 270 140" stroke="#22C55E" strokeWidth="1.5" strokeDasharray="5 4" opacity="0.4" />
-
-              {/* Globe icon center */}
-              <g transform="translate(195, 145)">
-                <circle cx="0" cy="0" r="22" fill="#1A1A1F" stroke="#27272A" strokeWidth="1" />
-                <circle cx="0" cy="0" r="14" stroke="#22C55E" strokeWidth="1" opacity="0.3" />
-                <path d="M-14 0 Q0 -8 14 0 Q0 8 -14 0" stroke="#22C55E" strokeWidth="1" opacity="0.3" fill="none" />
-                <line x1="-14" y1="0" x2="14" y2="0" stroke="#22C55E" strokeWidth="1" opacity="0.2" />
-                <line x1="0" y1="-14" x2="0" y2="14" stroke="#22C55E" strokeWidth="1" opacity="0.2" />
-              </g>
-
-              {/* Client cards */}
-              <g transform="translate(30, 60)">
-                <rect width="110" height="55" rx="8" fill="#1A1A1F" stroke="#27272A" strokeWidth="1" />
-                <text x="12" y="22" fill="#A1A1AA" fontSize="8" fontFamily="system-ui">Hotel Las Olas</text>
-                <text x="12" y="38" fill="#22C55E" fontSize="11" fontWeight="bold" fontFamily="system-ui">+180% reservas</text>
-              </g>
-
-              <g transform="translate(258, 230)">
-                <rect width="115" height="55" rx="8" fill="#1A1A1F" stroke="#27272A" strokeWidth="1" />
-                <text x="12" y="22" fill="#A1A1AA" fontSize="8" fontFamily="system-ui">Tour Aventura CR</text>
-                <text x="12" y="38" fill="#22C55E" fontSize="11" fontWeight="bold" fontFamily="system-ui">x3 consultas web</text>
-              </g>
-
-              {/* Remote work indicator */}
-              <g transform="translate(30, 258)">
-                <rect width="130" height="34" rx="6" fill="#22C55E" opacity="0.1" />
-                <circle cx="17" cy="17" r="5" fill="#22C55E" />
-                <text x="28" y="21" fill="#22C55E" fontSize="9" fontFamily="system-ui" fontWeight="500">Trabajo 100% remoto</text>
-              </g>
-            </svg>
-          </div>
+          <p className="text-xl leading-relaxed max-w-2xl" style={{ color: 'var(--text-secondary)' }}>
+            Trabajamos con negocios que ya tienen algo valioso — un buen producto, un buen servicio — pero necesitan estructura, claridad y estrategia para crecer de verdad.
+          </p>
         </div>
       </section>
 
-      {/* Resultados */}
-      <section className="border-y" style={{ borderColor: 'var(--border)' }}>
-        <div className="max-w-6xl mx-auto px-6 py-12">
-          <div className="grid grid-cols-3 gap-8">
-            {results.map((r) => (
-              <div key={r.label} className="text-center">
-                <p className="text-4xl font-bold mb-2" style={{ color: 'var(--accent)' }}>{r.number}</p>
-                <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>{r.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Problemas que resolvemos */}
-      <section className="max-w-6xl mx-auto px-6 py-24">
-        <div className="mb-16">
-          <p className="text-sm font-medium tracking-wider uppercase mb-3" style={{ color: 'var(--accent)' }}>Lo que escuchamos seguido</p>
-          <h2 className="text-3xl md:text-4xl font-bold" style={{ color: 'var(--text-primary)' }}>
-            ¿Te identificás con alguno de estos?
-          </h2>
-        </div>
-
+      {/* La diferencia */}
+      <section className="max-w-6xl mx-auto px-6 pb-24">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          {problems.map((p) => (
-            <div
-              key={p.problem}
-              className="p-8 rounded-xl border card-hover"
-              style={{ background: 'var(--surface)', borderColor: 'var(--border)' }}
-            >
-              <p className="text-base font-medium mb-4 italic" style={{ color: 'var(--text-primary)' }}>
-                {p.problem}
-              </p>
-              <div className="flex items-start gap-3">
-                <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" style={{ color: 'var(--accent)', flexShrink: 0, marginTop: 2 }}>
-                  <path d="M4.5 12.75l6 6 9-13.5" />
-                </svg>
-                <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{p.solution}</p>
-              </div>
+          {/* No vendemos */}
+          <div
+            className="p-8 rounded-xl border"
+            style={{ background: 'var(--surface)', borderColor: 'var(--border)' }}
+          >
+            <p className="text-sm font-semibold tracking-wider uppercase mb-6" style={{ color: 'var(--text-muted)' }}>No vendemos</p>
+            <div className="space-y-3">
+              {notThis.map((item) => (
+                <div key={item} className="flex items-center gap-3">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" style={{ color: '#EF4444', flexShrink: 0 }}>
+                    <path d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                  <span className="text-sm" style={{ color: 'var(--text-secondary)' }}>{item}</span>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+
+          {/* Diseñamos */}
+          <div
+            className="p-8 rounded-xl border gradient-border"
+            style={{ background: 'var(--surface)' }}
+          >
+            <p className="text-sm font-semibold tracking-wider uppercase mb-6" style={{ color: 'var(--accent)' }}>Diseñamos</p>
+            <div className="space-y-3">
+              {butThis.map((item) => (
+                <div key={item} className="flex items-center gap-3">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" style={{ color: 'var(--accent)', flexShrink: 0 }}>
+                    <path d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
+                  <span className="text-sm" style={{ color: 'var(--text-primary)' }}>{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Por qué nosotros */}
-      <section className="max-w-6xl mx-auto px-6 py-12 pb-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      {/* Cómo trabajamos */}
+      <section className="max-w-6xl mx-auto px-6 pb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div>
-            <p className="text-sm font-medium tracking-wider uppercase mb-3" style={{ color: 'var(--accent)' }}>La diferencia</p>
+            <p className="text-sm font-medium tracking-wider uppercase mb-4" style={{ color: 'var(--accent)' }}>Cómo trabajamos</p>
             <h2 className="text-3xl md:text-4xl font-bold mb-8" style={{ color: 'var(--text-primary)' }}>
-              No somos una agencia más
+              Analizamos el todo.<br />Construimos el sistema.
             </h2>
-            <div className="space-y-6">
+
+            <div className="space-y-8">
               {[
-                { title: 'Entendemos el turismo desde adentro', desc: 'Vivimos en destinos turísticos. Sabemos que un hotel boutique tiene necesidades distintas a una cadena, y que un operador de tours necesita algo diferente a un restaurante de playa.' },
-                { title: 'Marketing Y tecnología en un solo equipo', desc: 'No tenés que coordinar una agencia de marketing con un desarrollador separado. Nosotros pensamos la estrategia y construimos las herramientas en un flujo continuo.' },
-                { title: 'Resultados medibles, no promesas vagas', desc: 'Cada proyecto tiene objetivos claros: más reservas, más consultas, más visibilidad. Definimos métricas antes de empezar y las seguimos juntos.' },
+                {
+                  step: '01',
+                  title: 'Diagnóstico real',
+                  desc: 'Analizamos tu oferta, comunicación, procesos y puntos de contacto. Detectamos dónde se pierde el valor y dónde están las oportunidades.',
+                },
+                {
+                  step: '02',
+                  title: 'Estrategia + ejecución',
+                  desc: 'Contenido, embudos, automatizaciones, IA y desarrollo web. Todo alineado a un objetivo concreto — no a métricas de vanidad.',
+                },
+                {
+                  step: '03',
+                  title: 'Ecosistema que escala',
+                  desc: 'Construimos para que tu negocio trabaje solo. Herramientas que convierten, automatizan y escalan sin aumentar la complejidad.',
+                },
               ].map((item) => (
-                <div key={item.title} className="flex gap-4">
-                  <div className="w-2 h-2 rounded-full mt-2.5 shrink-0" style={{ background: 'var(--accent)' }} />
+                <div key={item.step} className="flex gap-6">
+                  <span className="text-3xl font-bold leading-none pt-1" style={{ color: 'rgba(34,197,94,0.2)', minWidth: 40 }}>
+                    {item.step}
+                  </span>
                   <div>
-                    <h3 className="font-semibold mb-1" style={{ color: 'var(--text-primary)' }}>{item.title}</h3>
+                    <h3 className="font-semibold mb-2" style={{ color: 'var(--text-primary)' }}>{item.title}</h3>
                     <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{item.desc}</p>
                   </div>
                 </div>
@@ -182,68 +115,68 @@ export default function SobreMi() {
             </div>
           </div>
 
-          {/* Process illustration */}
-          <svg viewBox="0 0 360 300" fill="none" className="w-full h-auto">
-            <rect width="360" height="300" rx="16" fill="#131316" />
+          {/* Visual */}
+          <svg viewBox="0 0 360 400" fill="none" className="w-full h-auto">
+            <rect width="360" height="400" rx="16" fill="#131316" />
 
-            {/* Step 1 */}
-            <g transform="translate(30, 40)">
-              <circle cx="20" cy="20" r="20" fill="#22C55E" opacity="0.15" />
-              <circle cx="20" cy="20" r="12" fill="#22C55E" opacity="0.2" />
-              <text x="15" y="25" fill="#22C55E" fontSize="12" fontWeight="bold">1</text>
-              <text x="48" y="15" fill="#FAFAFA" fontSize="11" fontWeight="600" fontFamily="system-ui">Entendemos tu negocio</text>
-              <text x="48" y="29" fill="#A1A1AA" fontSize="9" fontFamily="system-ui">Reunión inicial, sin costo</text>
-            </g>
-            <line x1="50" y1="80" x2="50" y2="110" stroke="#27272A" strokeWidth="1.5" strokeDasharray="4 3" />
+            {/* Central system diagram */}
+            <circle cx="180" cy="180" r="60" stroke="#22C55E" strokeWidth="0.5" strokeDasharray="5 4" opacity="0.3" />
+            <circle cx="180" cy="180" r="90" stroke="#22C55E" strokeWidth="0.5" strokeDasharray="8 6" opacity="0.15" />
+            <circle cx="180" cy="180" r="120" stroke="#22C55E" strokeWidth="0.5" strokeDasharray="10 8" opacity="0.08" />
 
-            {/* Step 2 */}
-            <g transform="translate(30, 110)">
-              <circle cx="20" cy="20" r="20" fill="#22C55E" opacity="0.15" />
-              <circle cx="20" cy="20" r="12" fill="#22C55E" opacity="0.2" />
-              <text x="15" y="25" fill="#22C55E" fontSize="12" fontWeight="bold">2</text>
-              <text x="48" y="15" fill="#FAFAFA" fontSize="11" fontWeight="600" fontFamily="system-ui">Propuesta a medida</text>
-              <text x="48" y="29" fill="#A1A1AA" fontSize="9" fontFamily="system-ui">Timeline y presupuesto claro</text>
-            </g>
-            <line x1="50" y1="150" x2="50" y2="180" stroke="#27272A" strokeWidth="1.5" strokeDasharray="4 3" />
+            {/* Center */}
+            <circle cx="180" cy="180" r="30" fill="#1A1A1F" stroke="#27272A" />
+            <text x="167" y="177" fill="#22C55E" fontSize="9" fontWeight="bold" fontFamily="system-ui">CLOVER</text>
+            <text x="169" y="190" fill="#A1A1AA" fontSize="7" fontFamily="system-ui">SYSTEM</text>
 
-            {/* Step 3 */}
-            <g transform="translate(30, 180)">
-              <circle cx="20" cy="20" r="20" fill="#22C55E" opacity="0.15" />
-              <circle cx="20" cy="20" r="12" fill="#22C55E" opacity="0.2" />
-              <text x="15" y="25" fill="#22C55E" fontSize="12" fontWeight="bold">3</text>
-              <text x="48" y="15" fill="#FAFAFA" fontSize="11" fontWeight="600" fontFamily="system-ui">Construimos y entregamos</text>
-              <text x="48" y="29" fill="#A1A1AA" fontSize="9" fontFamily="system-ui">Con capacitación incluida</text>
-            </g>
-            <line x1="50" y1="220" x2="50" y2="250" stroke="#27272A" strokeWidth="1.5" strokeDasharray="4 3" />
+            {/* Orbiting nodes */}
+            {/* Web */}
+            <circle cx="180" cy="90" r="22" fill="#1A1A1F" stroke="#27272A" />
+            <text x="168" y="87" fill="#FAFAFA" fontSize="7" fontFamily="system-ui">Desarrollo</text>
+            <text x="172" y="98" fill="#A1A1AA" fontSize="7" fontFamily="system-ui">Web</text>
 
-            {/* Step 4 */}
-            <g transform="translate(30, 250)">
-              <circle cx="20" cy="20" r="20" fill="#22C55E" opacity="0.25" />
-              <circle cx="20" cy="20" r="12" fill="#22C55E" opacity="0.4" />
-              <svg x="10" y="10" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22C55E" strokeWidth="2">
-                <path d="M4.5 12.75l6 6 9-13.5" />
-              </svg>
-              <text x="48" y="15" fill="#FAFAFA" fontSize="11" fontWeight="600" fontFamily="system-ui">Tu negocio crece online</text>
-              <text x="48" y="29" fill="#22C55E" fontSize="9" fontFamily="system-ui">Más reservas, más clientes</text>
-            </g>
+            {/* Marketing */}
+            <circle cx="270" cy="180" r="22" fill="#1A1A1F" stroke="#27272A" />
+            <text x="256" y="177" fill="#FAFAFA" fontSize="7" fontFamily="system-ui">Marketing</text>
+            <text x="260" y="188" fill="#A1A1AA" fontSize="7" fontFamily="system-ui">Digital</text>
 
-            {/* Decorative right side */}
-            <g transform="translate(230, 60)">
-              <rect width="100" height="180" rx="10" fill="#1A1A1F" stroke="#27272A" strokeWidth="1" />
-              <rect x="10" y="15" width="80" height="40" rx="6" fill="#131316" />
-              <rect x="18" y="24" width="45" height="6" rx="2" fill="#27272A" />
-              <rect x="18" y="34" width="60" height="4" rx="1" fill="#27272A" />
-              <rect x="18" y="42" width="35" height="4" rx="1" fill="#27272A" />
-              <rect x="10" y="65" width="80" height="28" rx="6" fill="#22C55E" opacity="0.08" stroke="#22C55E" strokeWidth="0.5" strokeOpacity="0.3" />
-              <text x="22" y="82" fill="#22C55E" fontSize="9" fontFamily="system-ui">+248 reservas este mes</text>
-              <rect x="10" y="103" width="80" height="20" rx="4" fill="#131316" />
-              <rect x="18" y="110" width="50" height="4" rx="1" fill="#27272A" />
-              <rect x="10" y="133" width="80" height="20" rx="4" fill="#131316" />
-              <rect x="18" y="140" width="40" height="4" rx="1" fill="#27272A" />
-              <rect x="10" y="153" width="80" height="18" rx="4" fill="#22C55E" />
-              <text x="28" y="165" fill="#000" fontSize="8" fontWeight="bold">Ver reporte</text>
-            </g>
+            {/* AI */}
+            <circle cx="180" cy="270" r="22" fill="#1A1A1F" stroke="#22C55E" strokeOpacity="0.4" />
+            <text x="173" y="267" fill="#22C55E" fontSize="7" fontFamily="system-ui">IA &amp;</text>
+            <text x="165" y="278" fill="#22C55E" fontSize="7" fontFamily="system-ui">Automation</text>
+
+            {/* Brand */}
+            <circle cx="90" cy="180" r="22" fill="#1A1A1F" stroke="#27272A" />
+            <text x="78" y="177" fill="#FAFAFA" fontSize="7" fontFamily="system-ui">Identidad</text>
+            <text x="82" y="188" fill="#A1A1AA" fontSize="7" fontFamily="system-ui">de Marca</text>
+
+            {/* Connector lines */}
+            <line x1="180" y1="150" x2="180" y2="112" stroke="#27272A" strokeWidth="1" />
+            <line x1="208" y1="172" x2="248" y2="172" stroke="#27272A" strokeWidth="1" />
+            <line x1="180" y1="210" x2="180" y2="248" stroke="#22C55E" strokeWidth="1" opacity="0.4" />
+            <line x1="152" y1="172" x2="112" y2="172" stroke="#27272A" strokeWidth="1" />
+
+            {/* Bottom badge */}
+            <rect x="40" y="330" width="280" height="40" rx="8" fill="#1A1A1F" stroke="#27272A" />
+            <circle cx="65" cy="350" r="8" fill="#22C55E" opacity="0.2" />
+            <circle cx="65" cy="350" r="4" fill="#22C55E" />
+            <text x="82" y="347" fill="#FAFAFA" fontSize="10" fontWeight="600" fontFamily="system-ui">Pocos clientes.</text>
+            <text x="82" y="361" fill="#A1A1AA" fontSize="9" fontFamily="system-ui">Involucración total en cada uno.</text>
           </svg>
+        </div>
+      </section>
+
+      {/* Quote */}
+      <section className="max-w-6xl mx-auto px-6 pb-24">
+        <div
+          className="p-10 md:p-16 rounded-2xl border text-center"
+          style={{ background: 'var(--surface)', borderColor: 'var(--border)' }}
+        >
+          <p className="text-2xl md:text-3xl font-medium leading-snug max-w-3xl mx-auto mb-6" style={{ color: 'var(--text-primary)' }}>
+            "Si sentís que tu negocio puede dar más,<br />
+            <span style={{ color: 'var(--accent)' }}>probablemente tengas razón.</span>"
+          </p>
+          <p className="text-sm" style={{ color: 'var(--text-muted)' }}>Nuestro trabajo es hacerlo realidad.</p>
         </div>
       </section>
 
@@ -254,17 +187,17 @@ export default function SobreMi() {
           style={{ background: 'var(--surface)' }}
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: 'var(--text-primary)' }}>
-            Tu negocio merece estar<br />en el mapa digital
+            Cada decisión tiene un porqué.<br />Cada acción apunta a crecer.
           </h2>
           <p className="text-lg mb-8 max-w-lg mx-auto" style={{ color: 'var(--text-secondary)' }}>
-            Primera consulta sin costo. Contanos tu situación y te decimos qué haríamos y cuánto costaría.
+            Primera consulta sin costo. Sin compromiso.
           </p>
           <Link
             href="/contacto"
             className="inline-flex items-center px-8 py-4 rounded-lg font-medium text-lg transition-all duration-200 glow-accent"
             style={{ background: 'var(--accent)', color: '#000' }}
           >
-            Consulta gratis →
+            Hablemos →
           </Link>
         </div>
       </section>
