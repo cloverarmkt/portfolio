@@ -94,7 +94,7 @@ export function HeroIllustration() {
 }
 
 export function ServiceIllustration({ type }: { type: 'web' | 'marketing' | 'brand' | 'landing' }) {
-  const illustrations: Record<string, JSX.Element> = {
+  const illustrations: Record<string, React.ReactNode> = {
     web: (
       <svg viewBox="0 0 200 150" fill="none" className="w-full h-auto">
         <rect x="20" y="10" width="160" height="110" rx="8" fill="#131316" stroke="#27272A" />
